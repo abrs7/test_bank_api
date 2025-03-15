@@ -3,9 +3,12 @@
 This project is a Django REST API that provides endpoints for handling bank and branch data, as well as submitting applications. The application is containerized using Docker for easy deployment.
 
 ##  Features
-- **Get List of Banks** (`GET /api/banks`)
-- **Get Branches by Bank** (`GET /api/branches?bank_id={id}`)
-- **Submit an Application** (`POST /api/applications/submit`)
+
+- **Get List of Banks** (`GET /banks/get_banks`)
+- **Get Branches by Bank** (`GET /banks/get_branches?bank_id={id}`)
+- **Submit an Application** (`POST /banks/applications/submit`)
+
+
 
 ---
 
@@ -58,7 +61,10 @@ Now, visit **http://localhost:8000** to access the API.
 ## 📖 API Documentation
 
 ### 1️⃣ Get Banks
-**Endpoint:** `GET /api/banks`
+
+**Endpoint:** `GET /banks/get_banks`
+
+
 ```json
 {
   "banks": [
@@ -69,7 +75,9 @@ Now, visit **http://localhost:8000** to access the API.
 ```
 
 ### 2️⃣ Get Branches
-**Endpoint:** `GET /api/branches?bank_id={id}`
+
+**Endpoint:** `GET /banks/get_branches?bank_id={id}`
+
 ```json
 {
   "branches": [
@@ -80,7 +88,9 @@ Now, visit **http://localhost:8000** to access the API.
 ```
 
 ### 3️⃣ Submit an Application
-**Endpoint:** `POST /api/applications/submit`
+
+**Endpoint:** `POST /banks/applications/submit`
+
 
 **Request Body:**
 ```json
